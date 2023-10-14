@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home_quize .css">
+    <title>Document</title>
+</head>
 <body>
-
-<h2>With "use strict":</h2>
-<h3>Using a variable without declaring it, is not allowed.</h3>
-
-<p>Activate debugging in your browser (F12) to see the error report.</p>
-
-<script>
-"use strict";
-var x = 3.14;  // This will cause an error (x is not defined).
-</script>
-
+    <div id="s-no1" class="main">
+        <div id="Qes">
+            <div>
+            <span id="s-no">1.</span>
+            </div>
+        
+            <div id="Qs_bg">
+            <p id="Qs">What is a correct syntax to output "Hello World" in C?</p>
+            </div>
+        </div>
+            <div id="option">
+            <input type="radio" name="ANS" value="1"><label>System.out.printline("Hello World");</label><br>
+            <input type="radio" name="ANS" value="2"><label>printf("Hello World");</label><br>
+            <input type="radio" name="ANS" value="3"><label>Console.WriteLine("Hello World");</label><br>
+            <input type="radio" name="ANS" value="4"><label>cout << "Hello World";</label>
+            </div>
+            <div id="buttons"> 
+                <div><button id="prev">Prev</button></div>
+                <div><button id="next">next</button></div>
+            </div>
+        
+    </div>
 </body>
 </html>
