@@ -32,15 +32,21 @@ function loads(id){
             if(id!=0){
                 document.getElementById(`s-no${id-1}`).style.display="none";
             }
+            for(var x=1;x<=id;x++)
+            {
+                document.getElementById(`s-no${x-1}`).style.display="none";
+            }
         })
     })    
    
 }
+
 var pos=0;
+//var current=0;
 function prev(){
    
     document.getElementById(`s-no${pos-1}`).style.display="block";
-   // document.getElementById(`s-no${pos+1}`).style.display="block";
+    document.getElementById(`s-no${pos}`).style.display="none";
     pos--;
     
 }
