@@ -6,6 +6,7 @@ function loads(id){
         data.json()
         .then((dat)=>{
                 //console.log(JSON.stringify(dat[0].Ques));
+            
             code+=`<div id="s-no${id}" class="main">
             <div id="Qes">
                 <div>
@@ -29,32 +30,57 @@ function loads(id){
                 </div>
             </div>`;
             document.getElementById('body').innerHTML=code;
-            if(id!=0){
-                document.getElementById(`s-no${id-1}`).style.display="none";
-            }
+             if(id!=0){
+                 document.getElementById(`s-no${id-1}`).style.display="none";
+             }
+            // else{
+            //     document.getElementById(`s-no${id+1}`).style.display="none";
+            // }
             for(var x=1;x<=id;x++)
             {
                 document.getElementById(`s-no${x-1}`).style.display="none";
+
             }
+            bool=false;
+            current=id;
         })
     })    
    
 }
-
+var bool=false;
 var pos=0;
-//var current=0;
+var current=0;
 function prev(){
    
     document.getElementById(`s-no${pos-1}`).style.display="block";
     document.getElementById(`s-no${pos}`).style.display="none";
     pos--;
+    bool=true
     
 }
 
 function next(){
     
-    //document.getElementById(`s-no${pos}`).style.display="none";
-    pos++;
-    loads(pos);
+   // document.getElementById(`s-no${pos}`).style.display="none";
+    
+    if(pos>=current)
+    {
+        bool=false;
+    } 
+   
+   
+   if(bool)
+    {   
+        pos++;
+        document.getElementById(`s-no${pos-1}`).style.display="none";
+        document.getElementById(`s-no${pos}`).style.display="block";
+        
+    }   
+    else
+    {
+        pos++;
+        loads(pos);
+
+    }
 
 }
