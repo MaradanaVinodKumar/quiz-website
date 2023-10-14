@@ -1,0 +1,40 @@
+{
+    "ques":[
+        {
+            "se_no":1,
+            "Ques":"What is a correct syntax to output \"Hello World\" in C?",
+            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
+            "Ans":2
+        },
+        {
+            "se_no":2,
+            "Ques":"What is kumar",
+            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
+            "Ans":2
+        },
+        {
+            "se_no":3,
+            "Ques":"What is vinod",
+            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
+            "Ans":2
+        },
+        {
+            "se_no":4,
+            "Ques":"What is uday",
+            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
+            "Ans":2
+        },
+        {
+            "se_no":5,
+            "Ques":"What is ganesh",
+            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
+            "Ans":2
+        },
+        {
+            "se_no":6,
+            "Ques":"What is kartheek",
+            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
+            "Ans":2
+        }
+    ]   
+}
