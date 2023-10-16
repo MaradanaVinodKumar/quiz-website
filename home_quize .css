@@ -20,7 +20,7 @@ input,label{
     background-color: rgb(255, 255, 255);
 }
 
-.main{
+.main,#end{
     border: 0px solid;
     width: 800px;
     padding: 30px;
@@ -63,7 +63,7 @@ p{
 {
     text-align: right;
 }
-#next,#prev{
+#next,#prev,#Submit{
     border: 0px solid;
     border-left: 0px solid rgb(97, 111, 233);
     border-right: 3px solid rgb(97, 111, 233);
@@ -74,7 +74,16 @@ p{
     border-top-left-radius:0px ;
     padding: 3px ;
     background-color: rgb(151, 151, 250);
-    color: white
+    color: white;
+    cursor: pointer;
+}
+#Submit{
+    border-bottom-left-radius:10px ;
+    border-top-left-radius:10px ;
+    border-left: 3px solid rgb(255, 0, 13);
+    border-right:2px red;
+    background-color: rgb(238, 84, 84);
+
 }
 #prev{
     border-left: 3px solid rgb(97, 111, 233);
@@ -93,4 +102,26 @@ p{
 #prev:active{
     border-left: 0px solid rgb(97, 111, 233);
     border-right: 3px solid rgb(97, 111, 233);
+}
+
+
+#end{
+    text-align: center;
+}
+#start{
+
+    background-color: rgb(94, 94, 224);
+    border: 0px solid;
+    width: 100px;
+    font-size: 25px;
+    border-radius: 10px;
+    color: white;
+    margin: 100px 0 100px 0;
+    cursor: pointer;
+}
+#start:hover{
+    background-color: rgb(35, 35, 192);
+}
+#start:active{
+    background-color: rgb(46, 46, 223);
 }
