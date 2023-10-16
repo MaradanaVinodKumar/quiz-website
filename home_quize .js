@@ -27,10 +27,11 @@ function loads(){
                 </div>
             </div>
                 <div id="option">`;
-
-             for(x of dat[id].options)
+                i=1;
+             for(var x of dat[id].options)
              {
-                code+=`<input type="radio" name="ANS${id}" value="1"><label>${x}</label><br>`
+                code+=`<input type="radio" name="ANS${id}" value="${i}"><label>${x}</label><br>`
+                i++;
              } 
               code+= ` </div>
                 <div id="buttons"> 
@@ -70,15 +71,16 @@ function loads(){
                         </div>
                     </div>
                         <div id="option">`;
-
+                var i=1
              for(x of dat[id].options)
              {
-                code+=`<input type="radio" name="ANS${id}" value="1"><label>${x}</label><br>`
+                code+=`<input type="radio" name="ANS${id}" value="${i}"><label>${x}</label><br>`
+                i++;
              } 
               code+= ` </div>
                 <div id="buttons"> 
                     <div><button id="prev" onclick="prev()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Prev </button></div>
-                    <div><button id="Submit">Submit</button></div>
+                    <div><button id="Submit" onclick="Submit">Submit</button></div>
                 </div>
             </div>`;
             document.getElementById('body').innerHTML=code;
@@ -151,5 +153,11 @@ function next(){
     //     //loads(pos);
     // }
 
+}
+
+
+function Submit(){
+    var arr=[];
+    
 }
 
