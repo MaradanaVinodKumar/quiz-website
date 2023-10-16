@@ -96,8 +96,8 @@ function loads(){
              
             document.getElementById(`s-no0`).style.display="block";
             pos=0;
-            //time=current/2;
-            time=1-1;
+            time=Math.ceil(current/2);
+          
             var m=setInterval(()=>{time--;s=60; if(time<0){document.getElementById('time-count').innerText='00:00';clearInterval(m)}},60000);
 
             var sec=setInterval(()=>{
@@ -152,3 +152,4 @@ function next(){
     // }
 
 }
+
