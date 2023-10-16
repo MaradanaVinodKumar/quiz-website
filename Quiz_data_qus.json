@@ -36,6 +36,13 @@
             "Ques":"What is kartheek",
             "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
             "Ans":2
+        },
+        {
+            
+            "se_no":7,
+            "Ques":"What is kartheek",
+            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
+            "Ans":2
         }
     ]   
 }

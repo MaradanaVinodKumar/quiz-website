@@ -1,6 +1,11 @@
 var code="";
-function loads(){
 
+var  time=0;
+var s=60;
+
+
+function loads(){
+    times_bool=true;
     var data= fetch("http://localhost:3000/ques")
     .then((data)=>{
         data.json()
@@ -88,18 +93,27 @@ function loads(){
             bool=false;
             current=id;
             //pos=id;
-
+             
             document.getElementById(`s-no0`).style.display="block";
             pos=0;
+            //time=current/2;
+            time=1-1;
+            var m=setInterval(()=>{time--;s=60; if(time<0){document.getElementById('time-count').innerText='00:00';clearInterval(m)}},60000);
 
-
-
-           
+            var sec=setInterval(()=>{
+               s--;
+               
+               document.getElementById('time-count').innerText=(time=(time.toString()).length=='1'?"0"+time:time)+":"+(s=(s.toString()).length=='1'?"0"+s:s);
+               if(time<0){document.getElementById('time-count').innerText='00:00';clearInterval(sec);}
+            },1000)
+            
             }
         }
         
         })
     })    
+    
+       
    
 }
 var bool=false;

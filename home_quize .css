@@ -176,7 +176,7 @@ i{
     border: 0px dotted;
     overflow: hidden;
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 20px;
     width: 860px;
     box-shadow:inset 0px 0px 30px 0px rgb(1, 15, 15);
 }
@@ -197,8 +197,8 @@ i{
     text-align: center;
     font-weight: 600;
     padding-top: 30px;
-    text-decoration: underline;
-    text-decoration-color:rgb(3, 52, 185);
+    /* text-decoration: underline;
+    text-decoration-color:rgb(3, 52, 185);*/
 }
 lm{
     font-size: 20px;
@@ -208,20 +208,29 @@ lm{
     margin-top: 30px;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(3, 14, 109);
+    color: rgb(6, 26, 204);
+    font-weight: 600;
 }
 #time-bg{
     border: 0px solid;
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    margin-top: 20px;
 }
 #time{
-    border: 1px solid; 
+    border: 0px solid; 
     margin-left: 46%;
     display: inline-flex;
+    color: rgb(5, 27, 129);
     
 }
 #time-count{
-    border: 1px solid;
+    border: 0px solid;
+    background-color: white;
+    color: rgb(236, 19, 19);
+    box-shadow: inset 0px 0px 5px 1px rgb(243, 186, 186);
+    padding: 3px;
+    width: 90px;
+    text-align: center;
 }
