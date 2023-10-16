@@ -2,11 +2,17 @@ body{
     background-image: url('/quiz-website/images/background\ 2.webp');
     background-repeat:no-repeat;
     background-size: 100%;
+    background-color: rgb(228, 253, 249);
+    margin: 0px;
 
 }
-input{
-    accent-color: rgb(194, 19, 107);
-
+input[type='radio']{
+    accent-color: rgb(7, 9, 136);
+    cursor: pointer;
+    border: 0px;
+    width: 20px;
+    height: 20px;
+    
 }
 input,label{
     margin-top: 20px;
@@ -20,20 +26,34 @@ input,label{
     background-color: rgb(255, 255, 255);
 }
 
-.main,#end{
+.main,#end,#body-bg{
     border: 0px solid;
     width: 800px;
     padding: 30px;
-    margin: 0 auto;
-    margin-top: 200px;
+    /* margin: 0 auto;
+    margin-top: 200px; */
     font-size: 28px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 15px;
-    box-shadow: 0px 0px 30px 0px black;
+    box-shadow: 0px 0px 30px 0px rgb(192, 192, 192);
     background-image: url("images/background\ 2.webp");
     background-size: 100%;
     background-blend-mode:saturation;
 }
+
+.anim{
+    animation-name: scrolls;
+    animation-duration: 0.1s;
+    position: relative;
+    
+   
+}
+@keyframes scrolls {
+    0%{left: 900px;}
+    100%{left: 0px;}
+
+}
+
 #Qes{
     border: 0px solid;
     display: inline-flex;
@@ -41,12 +61,25 @@ input,label{
 p{
     margin: 0px;
     margin-left: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 148);
 }
-#option{
+#s-no{
+    font-weight: bold;
+    color: rgb(12, 12, 12);
+}
+label{
+    color: rgb(1, 108, 122);
+    
+}
+
+#option,#end{
     border: 0px dotted;
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
+    height: 250px;
+
 }
 #buttons{
     display: inline-flex;
@@ -74,17 +107,23 @@ p{
     border-top-left-radius:0px ;
     padding: 3px ;
     background-color: rgb(151, 151, 250);
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    font-weight: 600;
+
 }
 #Submit{
     border-bottom-left-radius:10px ;
     border-top-left-radius:10px ;
-    border-left: 3px solid rgb(255, 0, 13);
-    border-right:2px red;
+    border-left: 3px solid rgb(145, 3, 10);
+    border-right:3px solid rgb(145, 4, 4);
     background-color: rgb(238, 84, 84);
 
 }
+#Submit:active{
+    background-color: rgb(129, 0, 0);
+}
+
 #prev{
     border-left: 3px solid rgb(97, 111, 233);
     border-right: 0px solid rgb(97, 111, 233);
@@ -103,25 +142,86 @@ p{
     border-left: 0px solid rgb(97, 111, 233);
     border-right: 3px solid rgb(97, 111, 233);
 }
-
+i{
+    color: rgb(0, 2, 134);
+    margin: 2px;
+}
 
 #end{
     text-align: center;
 }
 #start{
 
-    background-color: rgb(94, 94, 224);
+    background-color: rgb(70, 70, 201);
     border: 0px solid;
-    width: 100px;
-    font-size: 25px;
+    width: 200px;
+    font-size: 30px;
     border-radius: 10px;
+    padding: 10px;
     color: white;
     margin: 100px 0 100px 0;
     cursor: pointer;
+    border-bottom: 3px  solid black;
 }
 #start:hover{
-    background-color: rgb(35, 35, 192);
+    background-color: rgb(94, 94, 224);
 }
 #start:active{
     background-color: rgb(46, 46, 223);
+    border-bottom: 3px  solid rgb(46, 46, 223);
+}
+
+
+#body-bg{
+    border: 0px dotted;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 860px;
+    box-shadow:inset 0px 0px 30px 0px rgb(1, 15, 15);
+}
+
+#header{
+    border: 0px solid;
+    height: 200px;
+    /* border-bottom-left-radius: 1000px;
+    border-bottom-right-radius: 1000px; */
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    background-color: white;
+    background-image: linear-gradient(white,rgb(11, 160, 152));
+}
+#head-name{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 30px;
+    text-decoration: underline;
+    text-decoration-color:rgb(3, 52, 185);
+}
+lm{
+    font-size: 20px;
+}
+#En-test{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(3, 14, 109);
+}
+#time-bg{
+    border: 0px solid;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#time{
+    border: 1px solid; 
+    margin-left: 46%;
+    display: inline-flex;
+    
+}
+#time-count{
+    border: 1px solid;
 }

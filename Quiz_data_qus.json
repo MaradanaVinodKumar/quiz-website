@@ -9,7 +9,7 @@
         {
             "se_no":2,
             "Ques":"What is kumar",
-            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
+            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");"],
             "Ans":2
         },
         {
@@ -31,6 +31,7 @@
             "Ans":2
         },
         {
+            
             "se_no":6,
             "Ques":"What is kartheek",
             "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
