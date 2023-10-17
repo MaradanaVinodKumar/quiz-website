@@ -8,40 +8,61 @@
         },
         {
             "se_no":2,
-            "Ques":"What is kumar",
-            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");"],
+            "Ques":"How do you insert COMMENTS in C code?",
+            "options":[" * This is a comment"," // This is a comment"," -- This is a comment;"," # This is a comment"],
             "Ans":2
         },
         {
             "se_no":3,
-            "Ques":"What is vinod",
-            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
-            "Ans":2
+            "Ques":"How can you create a variable with the numeric value 5?",
+            "options":[" int num = 5;"," num = 5;"," num = 5 int;"," val num = 5;"],
+            "Ans":1
         },
         {
             "se_no":4,
-            "Ques":"What is uday",
-            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
-            "Ans":2
+            "Ques":"How can you create a variable with the floating number 2.8?",
+            "options":[" val num = 2.8;"," num = 2.8 float;"," float num = 2.8;"," num = 2.8 double;"],
+            "Ans":3
         },
         {
             "se_no":5,
-            "Ques":"What is ganesh",
-            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
+            "Ques":"Which function is often used to output values and print text?",
+            "options":[" write()"," printf()"," output()"," printword()"],
             "Ans":2
         },
         {
             
             "se_no":6,
-            "Ques":"What is kartheek",
-            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
-            "Ans":2
+            "Ques":"Which format specifier is often used to print integers?",
+            "options":["%f","%c","%s","%d"],
+            "Ans":4
         },
         {
             
             "se_no":7,
-            "Ques":"What is kartheek",
-            "options":["System.out.printline(\"Hello World\");","printf(\"Hello World\");","Console.WriteLine(\"Hello World\");","cout << \"Hello World\";"],
+            "Ques":"Which operator can be used to compare two values?",
+            "options":["=","><","==","<>"],
+            "Ans":3
+        },
+        {
+            
+            "se_no":8,
+            "Ques":"Array indexes start with ?",
+            "options":["1","0"],
+            "Ans":2
+        },
+        {
+            
+            "se_no":9,
+            "Ques":"Which statement can be used to select one of many code blocks to be executed?",
+            "options":[" switch"," break"," default"," when"],
+            "Ans":1
+        },
+        {
+            
+            "se_no":10,
+            "Ques":"How do you start writing a for loop in C?",
+            "options":[" for (int i = 0; switch < 5; i++)"," for (int i = 0; i < 5; i++)"," for (int i = 0; while < 5; i++)"," for (x in y)"],
             "Ans":2
         }
     ]   

@@ -2,7 +2,8 @@ var code="";
 
 var  time=0;
 var s=60;
-
+var m;
+var sec;
 
 function loads(){
     times_bool=true;
@@ -80,7 +81,7 @@ function loads(){
               code+= ` </div>
                 <div id="buttons"> 
                     <div><button id="prev" onclick="prev()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Prev </button></div>
-                    <div><button id="Submit" onclick="Submit">Submit</button></div>
+                    <div><button id="Submit" onclick="Submit()">Submit</button></div>
                 </div>
             </div>`;
             document.getElementById('body').innerHTML=code;
@@ -99,10 +100,9 @@ function loads(){
             document.getElementById(`s-no0`).style.display="block";
             pos=0;
             time=Math.ceil(current/2);
-          
-            var m=setInterval(()=>{time--;s=60; if(time<0){document.getElementById('time-count').innerText='00:00';clearInterval(m)}},60000);
-
-            var sec=setInterval(()=>{
+            // time=0;
+             m=setInterval(()=>{time--;s=60; if(time<0){document.getElementById('time-count').innerText='00:00';Submit(false);alert('Time out!');clearInterval(m)}},60000);
+             sec=setInterval(()=>{
                s--;
                
                document.getElementById('time-count').innerText=(time=(time.toString()).length=='1'?"0"+time:time)+":"+(s=(s.toString()).length=='1'?"0"+s:s);
@@ -156,8 +156,79 @@ function next(){
 }
 
 
-function Submit(){
-    var arr=[];
+function Submit(sub_bool=true){
+    if(sub_bool)
+    {
+      var conform=confirm("do you want to submit!");
+      
+    }
+    else{
+        conform=true;
+    }
     
+    if(conform)
+    {
+    var arr=[];
+    var bool=false;
+    for(x=0;x<=current;x++){
+        var radio=document.getElementsByName(`ANS${x}`);
+        bool=true;
+        for(y of radio)
+        {
+            if(y.checked)
+            {
+                arr.push(y.value);
+               bool=false; 
+            }
+            
+        }
+        if(bool)
+        {
+            arr.push(0);
+        }
+    }
+    console.log(arr)
+    
+    fetch("http://localhost:3000/ques")
+    .then((data)=>{
+        data.json()
+        .then((data)=>{
+            var count=0;
+            i=0;
+            for(x of data)
+            {
+                if(x.Ans==arr[i])
+                {
+                    count++;
+                }
+                i++;
+            }
+            console.log(count);
+
+            document.getElementById('body').innerHTML=`    <div id="score">
+            <div id="scr">
+            -------- Score --------
+            </div>
+            <div id="cor">
+             Correct Answers : <label for="currect">${count} </label>
+            </div>
+            <div id="wron">
+                 Wrong Answers : <label for="wrong">${count}</label>
+            </div>
+            <div id="tot">
+             Total Quotation : <label for="total">${current+1}</label>
+             </div>
+                   
+             <div id="per">
+                 Percentage : <label for="pers">${(count/(current+1)*100).toFixed(1)}%</label>
+             </div>
+         </div>`;
+         clearInterval(sec);
+         clearInterval(m);
+         document.getElementById('time-count').innerText='00:00';
+        })
+    })
+    }
+   
 }
 
