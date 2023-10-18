@@ -210,13 +210,13 @@ function Submit(sub_bool=true){
             -------- Score --------
             </div>
             <div id="cor">
-             Correct Answers : <label for="currect">${count} </label>
+             Correct Answers : <label for="currect">${count} Q</label>
             </div>
             <div id="wron">
-                 Wrong Answers : <label for="wrong">${count}</label>
+                 Wrong Answers : <label for="wrong">${count} Q</label>
             </div>
             <div id="tot">
-             Total Quotation : <label for="total">${current+1}</label>
+             Total Quotation : <label for="total">${current+1} Q</label>
              </div>
                    
              <div id="per">
