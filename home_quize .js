@@ -98,6 +98,7 @@ function loads(){
             //pos=id;
              
             document.getElementById(`s-no0`).style.display="block";
+            document.getElementById('prev').style.display="none";
             pos=0;
             time=Math.ceil(current/2);
             // time=0;
@@ -209,18 +210,21 @@ function Submit(sub_bool=true){
             <div id="scr">
             -------- Score --------
             </div>
+            <div id="bord">
             <div id="cor">
              Correct Answers : <label for="currect">${count} Q</label>
             </div>
             <div id="wron">
                  Wrong Answers : <label for="wrong">${count} Q</label>
             </div>
-            <div id="tot">
-             Total Quotation : <label for="total">${current+1} Q</label>
-             </div>
+
                    
              <div id="per">
                  Percentage : <label for="pers">${(count/(current+1)*100).toFixed(1)}%</label>
+             </div>
+             <div id="tot">
+             Total Quotations : <label for="total">${current+1} Q</label>
+             </div>
              </div>
          </div>`;
          clearInterval(sec);
